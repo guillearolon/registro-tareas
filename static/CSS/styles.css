@@ -1,0 +1,215 @@
+body{
+    background-image: radial-gradient(circle, #f5995c, #f57171);
+    
+}
+
+h1{
+    text-align: start;
+    font-family: 'Radio Canada', sans-serif;
+    animation-name: titulo;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+    animation-play-state:initial;
+}
+
+@keyframes titulo{
+    0%{
+        transform: translateX(0);
+        color: black;
+    }
+    25%{
+        transform: translateX(1);
+        color: rgb(210, 205, 205);
+    }
+    50%{
+        transform: translateX(1);
+        color: black;
+    }
+    75%{
+        transform: translateX(0);
+        color: rgb(210, 205, 205);
+    }
+    100%{
+        transform: translateX(1);
+        color: black;
+    }
+}
+
+.form div{
+    margin-bottom: 10px;
+    font-variant: small-caps;
+    border-radius: 2px;
+
+}
+
+.form {
+    display: inline-flex;
+    background-color: rgb(250, 219, 177);
+    height: 9em;
+    width: 30em;
+    padding: 20px;
+    border-style:inset;
+    border-color:azure;
+}
+
+.form input, textarea{
+    font-variant: small-caps;
+    text-align: start;
+    box-sizing: border-box;
+    
+}
+
+.form textarea::placeholder{
+    font-size: 15px;
+  
+}
+
+.form button{
+    font-variant: small-caps;
+    color: black;
+    background-color: azure;
+}
+
+.form button:hover{
+    background-color: #f7904b;
+    font-weight: bolder;
+}
+
+.form label{
+    font-weight: bolder;
+}
+
+table th, td {
+    border: 1px solid;
+    padding: 1px;
+    font-variant: small-caps;
+    background-color:rgb(242, 243, 232);
+    color: rgb(0, 0, 0);
+    border-style:inset;
+    border-color:azure;
+}
+
+td{
+    font-size: 12px;
+
+}
+
+.t1{
+    width: 100px;
+    background-color: rgb(219, 219, 215);
+}
+.t2{
+    max-width: 150px;
+    background-color: rgb(219, 219, 215);
+    
+}
+
+.t3{
+    width: 100px;
+    background-color: rgb(219, 219, 215);
+}
+
+.t4{
+    width: 100px;
+    background-color: rgb(219, 219, 215);
+}
+
+.t5{
+    width: 20px;
+    background-color: rgb(219, 219, 215);
+}
+
+.td1{
+    max-width: 1px;
+    word-wrap: break-word;
+    font-size: 14px;
+    text-align: center;
+}
+
+.td2{
+    max-width: 150px;
+    word-wrap: break-word;
+    font-size: 14px;
+    padding: 5px;
+}
+
+.td3{
+    max-width: 100px;
+    word-wrap: break-word;
+    font-size: 14px;
+    text-align: center;
+}
+
+.td4{
+    max-width: 100px;
+    word-wrap: break-word;
+    font-size: 14px;
+    text-align: center;
+}
+
+.td5{
+   text-align: center;
+    
+}
+
+.curso{
+    background-color: gold;
+}
+
+.realizado{
+    background-color: chartreuse;
+    
+}
+
+.eliminar{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    background-color: rgba(236, 25, 25, 0.911);
+    padding: 5px;
+    text-align: center;
+    border: 1px solid;
+    font-size: 14px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 5px;
+    color: aliceblue;
+    border-radius: 5px;
+}
+
+.eliminar:hover{
+    color: black;
+}
+
+select{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+table{
+    width: 730px;
+}
+
+.table{
+    display:table-column;
+    background-color: rgb(250, 219, 177);
+    margin-left: 50px;
+    margin-top: -20px;
+    padding: 2px;
+    width: max-content;
+    height: max-content;
+    border-style:inset;
+    border-color:azure;
+}
+
+ul li{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    list-style: none;
+    font-size: 18px;
+    color: rgb(47, 125, 8);
+    font-weight: bolder;
+    background-color: rgb(61, 192, 96);
+    width: 205px;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename="CSS/styles.css" ) }}">
+    <link href="https://fonts.googleapis.com/css2?family=Radio+Canada&display=swap" rel="stylesheet">
+
+    <title>Registro Actividades</title>
+</head>
+<body>
+    <h1>Registro de actividades</h1>
+    
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <ul>
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    {% endwith %}
+
+    <div class="form">
+        <form action='/' method='POST'>
+            <div>
+            <label for="inc">Incidente:</label>
+            <input type="text" name="incidente" id="inc" placeholder="Incidente" required>
+            </div>
+            <div>
+            <label for="des">Descripción:</label>
+            <textarea name="descripcion" id="des" cols="60" rows="2" placeholder="ingrese una descripción" required></textarea>
+            </div>
+            <div>
+            <label for="nombre">Persona:</label>
+            <input type="text" name="persona" id="nombre" placeholder="Ingrese su nombre" required>
+            </div>
+            <div>
+            <button type="submit">Guardar</button>
+            </div>
+        </form>
+      
+        <div class="table">
+            <table>
+                <tr>
+                    <th class="t1">Incidente</th>
+                    <th class="t2">Descripción</th>
+                    <th class="t3">Persona</th>
+                    <th class="t4">Fecha</th>
+                    <th class="t5">Acción</th>
+                </tr>
+                <tr>
+                    {% for dato in datos %}
+                    <td class="td1">{{dato[1]}}</td>
+                    <td class="td2">{{dato[2]}}</td>
+                    <td class="td3">{{dato[3]}}</td>
+                    <td class="td4">{{dato[4]}}</td>
+                    <td class="td5">
+                    <a href="{{ url_for('delete', id=dato[0]) }}" class="eliminar">Eliminar</a>    
+                    </td>
+                </tr>
+                    {%endfor%}
+            </table>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename="JS/index.js" ) }}"></script>
+    
+</body>
+</html>
